@@ -1,0 +1,103 @@
+/* src/styles/main.css */
+body {
+  font-family: 'ludique', sans-serif;
+  background-color: #f7fafc;
+}
+
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #f97316, #fbbf24);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-4xl {
+  font-size: 2.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-cartoon {
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-cartoon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.video-container {
+  width: 80%; /* Augmenter la largeur */
+  height: 45%; /* Augmenter la hauteur */
+  margin: 2rem auto; /* Centrer le lecteur vidéo */
+}
+
+.fullscreen-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-video video {
+  width: 80%;
+  height: 80%;
+}
