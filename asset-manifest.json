@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/romi-box/static/css/main.b4c94289.css",
+    "main.js": "/romi-box/static/js/main.266cf299.js",
+    "static/js/156.4801583d.chunk.js": "/romi-box/static/js/156.4801583d.chunk.js",
+    "static/media/romi.png": "/romi-box/static/media/romi.e204c38c8d06f788ec4d.png",
+    "index.html": "/romi-box/index.html",
+    "main.b4c94289.css.map": "/romi-box/static/css/main.b4c94289.css.map",
+    "main.266cf299.js.map": "/romi-box/static/js/main.266cf299.js.map",
+    "156.4801583d.chunk.js.map": "/romi-box/static/js/156.4801583d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4c94289.css",
+    "static/js/main.266cf299.js"
+  ]
+}
