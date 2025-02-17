@@ -1,154 +1,437 @@
-/* src/RomiStyle.css */
+/* RomiStyle.css - Version optimisée */
+
+/* Variables CSS pour une meilleure maintenabilité */
 :root {
-    --romi-orange: #FF8833;
-    --romi-red: #FF4422;
-    --romi-blue: #33AADD;
-    --romi-yellow: #FFCC22;
-    --romi-dark: #333333;
-  }
-  
-  .romi-container {
+    --primary-color: #FF4422;
+    --secondary-color: #333333;
+    --accent-blue: #2196F3;
+    --accent-green: #4CAF50;
+    --accent-orange: #FF9800;
+    --background-light: #f5f5f5;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.2);
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-full: 50%;
+    --transition-default: all 0.3s ease;
+}
+
+/* Reset et styles de base */
+.romi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     min-height: 100vh;
-    background: #F0F2F5;
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .romi-header {
-    background: white;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: var(--background-light);
+}
+
+/* En-tête */
+.romi-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .romi-header-left {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.romi-header-left {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .romi-character {
-    height: 80px;
-    width: auto;
+    gap: 20px;
+}
+
+.romi-character {
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-  }
-  
-  .romi-welcome {
-    color: var(--romi-dark);
-    font-size: 1.8rem;
-    font-weight: bold;
+}
+
+.romi-welcome {
+    font-size: 24px;
     margin: 0;
-  }
-  
-  .romi-main {
-    max-width: 1400px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-  }
-  
-  .romi-themes-panel {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  
-  .romi-title {
-    color: var(--romi-orange);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .romi-theme-button {
+    color: var(--secondary-color);
+}
+
+/* Zone principale */
+.romi-main {
     width: 100%;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .romi-theme-button:hover {
-    transform: scale(1.02);
-  }
-  
-  .farm-theme { background: var(--romi-orange); }
-  .savanna-theme { background: var(--romi-red); }
-  .forest-theme { background: var(--romi-blue); }
-  
-  .romi-control-area {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .romi-game-controls {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  
-  .romi-buttons-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-  
-  .romi-button {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
-    color: white;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Panneau des thèmes */
+.romi-themes-panel {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.theme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.theme-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Boutons d'action circulaires */
+.action-buttons-circle {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.circle-button {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-full);
+    border: 3px solid var(--secondary-color);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: transform 0.2s;
-    text-align: center;
-  }
-  
-  .romi-button:hover {
+    transition: var(--transition-default);
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+}
+
+.circle-button:hover:not(:disabled) {
     transform: scale(1.05);
-  }
-  
-  .announce { background: var(--romi-blue); }
-  .new-game { background: var(--romi-orange); }
-  .help { background: var(--romi-red); }
-  .projection { background: var(--romi-yellow); }
-  
-  .romi-preview {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  
-  .video-container {
-    aspect-ratio: 16/9;
-    background: #000;
-    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+}
+
+.circle-button.bluetooth {
+    background-color: var(--accent-blue);
+}
+
+.circle-button.bluetooth.connected {
+    background-color: var(--primary-color);
+    animation: pulse 2s infinite;
+}
+
+.circle-button.game {
+    background-color: var(--accent-green);
+}
+
+.circle-button.presentation {
+    background-color: var(--accent-orange);
+}
+
+.circle-button.presentation.active {
+    background-color: #F57F17;
+    animation: pulse 2s infinite;
+}
+
+/* Bouton de randomisation */
+.romi-random-button {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-full);
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 3px solid var(--secondary-color);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.romi-random-button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.romi-random-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Layout principal */
+.romi-content-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Grille de boutons personnalisée */
+.romi-buttons-grid-custom {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+/* Boutons ronds */
+.romi-button-round {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: var(--border-radius-full);
+    font-family: Arial, sans-serif;
+    color: black;
+    border: 3px solid var(--secondary-color);
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+    transition: var(--transition-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+.romi-button-round span {
+    width: 100%;
+    display: block;
+    word-wrap: break-word;
+    line-height: 1.2;
+}
+
+/* Positions des boutons */
+.romi-button-round:nth-child(1) { top: 50%; left: 50%; }
+.romi-button-round:nth-child(2) { top: 30%; left: 50%; }
+.romi-button-round:nth-child(3) { top: 35.75%; left: 64.25%; }
+.romi-button-round:nth-child(4) { top: 50%; left: 70%; }
+.romi-button-round:nth-child(5) { top: 64.25%; left: 64.25%; }
+.romi-button-round:nth-child(6) { top: 70%; left: 50%; }
+.romi-button-round:nth-child(7) { top: 64.25%; left: 35.75%; }
+.romi-button-round:nth-child(8) { top: 50%; left: 30%; }
+.romi-button-round:nth-child(9) { top: 35.75%; left: 35.75%; }
+.romi-button-round:nth-child(10) { top: 35.75%; left: 84.25%; }
+.romi-button-round:nth-child(11) { top: 50%; left: 90%; }
+.romi-button-round:nth-child(12) { top: 64.25%; left: 84.25%; }
+.romi-button-round:nth-child(13) { top: 64.25%; left: 15.75%; }
+.romi-button-round:nth-child(14) { top: 50%; left: 10%; }
+.romi-button-round:nth-child(15) { top: 35.75%; left: 15.75%; }
+
+.romi-button-round:hover:not(:disabled) {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.romi-button-round.empty-slot {
+    background-color: #e0e0e0 !important;
+    cursor: default;
+    border-color: #ccc;
+    color: #999;
+}
+
+.romi-button-round.found {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #ccc !important;
+}
+
+/* Zone vidéo et compteur d'erreurs */
+.romi-preview {
+    flex: 1;
+    max-width: 600px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: black;
+    border-radius: var(--border-radius-md);
     overflow: hidden;
-  }
-  
-  .preview-video {
+    box-shadow: var(--shadow-sm);
+}
+
+.preview-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* Compteur d'erreurs */
+.error-counter-frame {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-default);
+}
+
+.error-counter-content {
+    text-align: center;
+}
+
+.error-counter-content h3 {
+    color: var(--secondary-color);
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.error-counter-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.error-count {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 5px;
+}
+
+.error-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: var(--border-radius-sm);
+    background-color: #f8f8f8;
+    font-style: italic;
+    color: #666;
+}
+
+/* Loading indicator */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-sm);
+    font-size: 16px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 68, 34, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 68, 34, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 68, 34, 0); }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .romi-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .romi-buttons-grid-custom {
+        width: 550px;
+        height: 550px;
+    }
+
+    .romi-button-round {
+        width: 75px;
+        height: 75px;
+    }
+
+    .romi-preview {
+        max-width: 800px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .theme-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action-buttons-circle {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .circle-button, 
+    .romi-random-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .romi-buttons-grid-custom {
+        width: 450px;
+        height: 450px;
+    }
+
+    .romi-button-round {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+    .romi-welcome {
+        font-size: 20px;
+    }
+
+    .romi-character {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle-button,
+    .romi-random-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .romi-buttons-grid-custom {
+        width: 350px;
+        height: 350px;
+    }
+
+    .romi-button-round {
+        width: 55px;
+        height: 55px;
+        font-size: 9px;
+        border-width: 2px;
+    }
+}
+.circle-button.music {
+    background-color: #9C27B0;
+    transition: all 0.3s ease;
   }
   
-  .progress-text {
-    font-size: 1.2rem;
-    color: var(--romi-dark);
-    font-weight: bold;
+  .circle-button.music:hover {
+    transform: scale(1.05) rotate(15deg);
+    background-color: #7B1FA2;
+    box-shadow: var(--shadow-md);
   }
