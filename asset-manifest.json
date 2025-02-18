@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/romi-box/static/css/main.7345e93d.css",
-    "main.js": "/romi-box/static/js/main.87ca806e.js",
+    "main.css": "/romi-box/static/css/main.961d9b9f.css",
+    "main.js": "/romi-box/static/js/main.add302c0.js",
     "static/js/156.4801583d.chunk.js": "/romi-box/static/js/156.4801583d.chunk.js",
+    "static/media/LogoRomi.png": "/romi-box/static/media/LogoRomi.98bb152c2086e557773e.png",
     "static/media/romi.png": "/romi-box/static/media/romi.e204c38c8d06f788ec4d.png",
     "index.html": "/romi-box/index.html",
-    "main.7345e93d.css.map": "/romi-box/static/css/main.7345e93d.css.map",
-    "main.87ca806e.js.map": "/romi-box/static/js/main.87ca806e.js.map",
+    "main.961d9b9f.css.map": "/romi-box/static/css/main.961d9b9f.css.map",
+    "main.add302c0.js.map": "/romi-box/static/js/main.add302c0.js.map",
     "156.4801583d.chunk.js.map": "/romi-box/static/js/156.4801583d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7345e93d.css",
-    "static/js/main.87ca806e.js"
+    "static/css/main.961d9b9f.css",
+    "static/js/main.add302c0.js"
   ]
 }
